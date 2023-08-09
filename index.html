@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GrowthScribe</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: bolder;
+        }
+
+        h3 {
+            font-weight: bolder;
+            color: black;
+        }
+
+        .lineSpace {
+            line-height: 2rem;
+        }
+
+        .btn {
+            width: 10rem;
+        }
+
+        .img {
+            height: 3rem;
+            width: 2rem;
+            position: relative;
+            left: -1rem;
+        }
+
+        .tag {
+            position: relative;
+            top: -1rem;
+            font-family: 'Lato', sans-serif;
+            font-weight: bolder;
+        }
+
+        #container {
+            margin-left: 38%;
+            margin-right: 38%;
+        }
+
+        input {
+            width: 100%;
+            height: 2.5rem;
+        }
+
+        #Submit {
+            height: 2.5rem;
+            background-color: blue;
+            color: white;
+            width: 100%;
+            position: relative;
+            top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h3>Tell us about you</h3>
+
+        <form class="lineSpace">
+            <label>Please tell a bit about you so that we can personalize your onboarding experience.<br><br></label>
+            <label> are looking for,</label>
+            <p>
+                <button class="btn" id="button1" onclick="fn_click1()"><img class="img" src="./images/des.svg"> <span
+                        class="tag">Designs</span></button>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+                <button class="btn" id="button2" onclick="fn_click2()"><img class="img" src="./images/pro.svg"><span class="tag">
+                        Projects</span></button>
+            </p>
+
+            <label>Full name</label>
+            <input type="text" name="Full name" required>
+
+            <label>Location</label>
+            <input type="text" name="Location" required>
+
+            <label>Phone number</label>
+            <input type="number" name="Phone number" required><br>
+
+            <input id="Submit" type="submit" name="submit" value="Procced to next step &#10132;" required>
+        </form>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+
+        function fn_click1() {
+            document.getElementById("button1").style.border = "blue 2px solid";
+            document.getElementById("button1").style.color = "blue";
+            document.getElementById("button1").style.backgroundColor = "lightcyan";
+
+            document.getElementById("button2").style.border = "black 1px solid";
+            document.getElementById("button2").style.color = "black";
+            document.getElementById("button2").style.backgroundColor = "transparent";
+            
+
+        }
+
+        function fn_click2() {
+            document.getElementById("button2").style.border = "blue 2px solid";
+            document.getElementById("button2").style.color = "blue";
+            document.getElementById("button2").style.backgroundColor = "lightcyan";
+
+            document.getElementById("button1").style.border = "black 1px solid";
+            document.getElementById("button1").style.color = "black";
+            document.getElementById("button1").style.backgroundColor = "transparent";
+
+        }
+
+    </script>
+</body>
+
+</html>
